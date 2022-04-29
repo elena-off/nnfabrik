@@ -23,7 +23,7 @@ if "nnfabrik.schema_name" in dj.config:
 
 
 schema = CustomSchema(dj.config.get("nnfabrik.schema_name", "nnfabrik_core"))
-
+print("hello")
 
 @schema
 class Fabrikant(dj.Manual):
