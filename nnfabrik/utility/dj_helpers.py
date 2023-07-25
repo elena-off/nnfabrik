@@ -284,6 +284,10 @@ def create_param_expansion(
                 for k, v in key.items():
                     if type(v) in [list, tuple]:
                         key[k] = str(v)
+                    if v == "False":
+                        key[k] = False
+                    if v == "True":
+                        key[k] = True
             self.insert1(key, ignore_extra_fields=True)
 
     NewTable.__name__ = to_camel_case(f.__name__) + suffix
